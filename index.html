@@ -188,7 +188,7 @@ a<!DOCTYPE html>
 
 
   /* Team */
-  .team{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+  .team{display:grid;grid-template-columns:1fr;gap:22px}
   .person{padding:34px 30px;border-radius:24px;background:var(--glass);border:1px solid var(--line);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);position:relative;overflow:hidden;transition:border-color .4s,transform .4s}
   .person:hover{border-color:rgba(130,150,255,.5);transform:translateY(-4px)}
   .person::after{content:"";position:absolute;right:-70px;top:-70px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(139,92,255,.22),transparent 70%);pointer-events:none}
@@ -209,7 +209,6 @@ a<!DOCTYPE html>
   .li:hover{border-color:var(--c1);transform:translateY(-2px)}
   .li span{white-space:normal;text-align:left}
   .li b{flex:none;display:inline-grid;place-items:center;width:22px;height:22px;border-radius:5px;background:#0a66c2;color:#fff;font-size:12px;font-weight:700}
-
   /* Contact */
   .contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:50px;align-items:start}
   .info{display:grid;gap:14px;margin-top:32px}
