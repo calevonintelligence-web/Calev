@@ -1,4 +1,4 @@
-a<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -58,9 +58,9 @@ a<!DOCTYPE html>
   "email": "info@calevonintelligence.com",
   "telephone": "+994104650927",
   "areaServed": "Worldwide",
-  "sameAs": ["https://www.linkedin.com/in/calevon-intelligence-company-5807943a7/"],
+  "sameAs": ["https://www.linkedin.com/company/calevon-i%CC%87ntelligence/"],
   "founder": [
-    {"@type": "Person", "name": "Zaur Hanifeyev", "jobTitle": "Founder, Cyber Threat Intelligence (CTI) Specialist", "sameAs": "https://www.linkedin.com/in/zaur-henifeyev-607151435/"},
+    {"@type": "Person", "name": "Zaur Henifeyev", "jobTitle": "Founder, Cyber Threat Intelligence (CTI) Specialist", "sameAs": "https://www.linkedin.com/in/zaur-henifeyev-607151435/"},
     {"@type": "Person", "name": "Nurlan Tehmezov", "jobTitle": "Co-Founder, Intelligence Analyst", "sameAs": "https://www.linkedin.com/in/nurlan-tahmazov-132a013a0/"}
   ],
   "knowsAbout": ["Corporate intelligence","Strategic risk advisory","Due diligence","Open-source intelligence (OSINT)","Business risk assessment","Global corporate investigations"],
@@ -188,7 +188,7 @@ a<!DOCTYPE html>
 
 
   /* Team */
-  .team{display:grid;grid-template-columns:1fr;gap:22px}
+  .team{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
   .person{padding:34px 30px;border-radius:24px;background:var(--glass);border:1px solid var(--line);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);position:relative;overflow:hidden;transition:border-color .4s,transform .4s}
   .person:hover{border-color:rgba(130,150,255,.5);transform:translateY(-4px)}
   .person::after{content:"";position:absolute;right:-70px;top:-70px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(139,92,255,.22),transparent 70%);pointer-events:none}
@@ -205,10 +205,13 @@ a<!DOCTYPE html>
   .person .role{line-height:1.5}
   .foot-links{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center}
   .foot-links a{color:var(--c1)}
+  .foot-links a{padding:4px 0}
+  @media(max-width:720px){.foot-links{flex-direction:column;align-items:flex-start;gap:8px}}
   .li{display:inline-flex;align-items:center;gap:10px;margin-top:30px;padding:12px 22px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.04);font-family:'Space Grotesk';font-size:14px;transition:border-color .3s,transform .3s}
   .li:hover{border-color:var(--c1);transform:translateY(-2px)}
   .li span{white-space:normal;text-align:left}
   .li b{flex:none;display:inline-grid;place-items:center;width:22px;height:22px;border-radius:5px;background:#0a66c2;color:#fff;font-size:12px;font-weight:700}
+
   /* Contact */
   .contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:50px;align-items:start}
   .info{display:grid;gap:14px;margin-top:32px}
@@ -227,7 +230,7 @@ a<!DOCTYPE html>
   .box .btn{width:100%;justify-content:center}
   .hint{margin-top:14px;font-size:12.5px;color:var(--muted);text-align:center}
 
-  footer{padding:40px clamp(20px,6vw,90px);border-top:1px solid var(--line);background:rgba(19,26,58,.9);display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;color:var(--muted);font-size:13px}
+  footer{padding:40px clamp(20px,6vw,90px) 96px;border-top:1px solid var(--line);background:rgba(19,26,58,.9);display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;color:var(--muted);font-size:13px}
 
   .wa{position:fixed;right:22px;bottom:22px;z-index:60;display:flex;align-items:center;gap:10px;padding:13px 20px;border-radius:999px;
     background:#1fb855;color:#fff;font-family:'Space Grotesk';font-weight:500;font-size:14px;box-shadow:0 10px 30px rgba(31,184,85,.4);transition:transform .3s}
@@ -280,6 +283,28 @@ a<!DOCTYPE html>
     *{animation:none!important;transition:none!important}
     .rv{opacity:1;transform:none}
   }
+
+  /* Team layout refinement: stack profiles and keep their frames consistent */
+  .team{
+    grid-template-columns:minmax(0, 900px);
+    justify-content:center;
+    gap:22px;
+  }
+  .person{
+    display:flex;
+    flex-direction:column;
+    min-height:520px;
+  }
+  .person .li{
+    align-self:flex-start;
+    margin-top:auto;
+  }
+  @media (max-width: 700px){
+    .team{grid-template-columns:minmax(0, 1fr)}
+    .person{min-height:0}
+    .person .li{margin-top:26px}
+  }
+
 </style>
 </head>
 <body>
@@ -355,7 +380,7 @@ a<!DOCTYPE html>
     <div class="team">
       <article class="person rv">
         <div class="avatar">ZH</div>
-        <h3>Zaur Hanifeyev</h3>
+        <h3>Zaur Henifeyev</h3>
         <div class="role">Founder · Cyber Threat Intelligence (CTI) Specialist</div>
         <p>Founder of Calevon Intelligence and Cyber Threat Intelligence specialist. Zaur supports client engagements through open-source research and threat-focused analysis, with a regional focus on Azerbaijan and Türkiye.</p>
         <h4 class="bh">Background</h4>
@@ -416,7 +441,7 @@ a<!DOCTYPE html>
           <a href="mailto:info@calevonintelligence.com"><div class="i">✉</div><div><small>Email</small><span class="v">info@calevonintelligence.com</span></div></a>
           <a href="tel:+994104650927"><div class="i">☎</div><div><small>Phone</small><span class="v">+994 10 465 09 27</span></div></a>
           <a href="https://wa.me/994104650927" target="_blank" rel="noopener noreferrer"><div class="i">💬</div><div><small>WhatsApp</small><span class="v">Tap to start a chat</span></div></a>
-          <a href="https://www.linkedin.com/in/calevon-intelligence-company-5807943a7/" target="_blank" rel="noopener noreferrer"><div class="i">in</div><div><small>LinkedIn</small><span class="v">Calevon Intelligence</span></div></a>
+          <a href="https://www.linkedin.com/company/calevon-i%CC%87ntelligence/" target="_blank" rel="noopener noreferrer"><div class="i">in</div><div><small>LinkedIn</small><span class="v">Calevon Intelligence</span></div></a>
           <div><div class="i">🌐</div><div><small>Coverage</small><span class="v">Serving clients worldwide<br>Secure video meetings or in person, by appointment</span></div></div>
         </div>
       </div>
@@ -434,7 +459,7 @@ a<!DOCTYPE html>
 
 <footer>
   <div>© <span id="yr">2026</span> Calevon Intelligence Company. All rights reserved.</div>
-  <div class="foot-links"><span>Serving clients worldwide</span><a href="mailto:info@calevonintelligence.com">info@calevonintelligence.com</a><a href="https://www.linkedin.com/in/calevon-intelligence-company-5807943a7/" target="_blank" rel="noopener noreferrer">LinkedIn</a></div>
+  <div class="foot-links"><span>Serving clients worldwide</span><a href="mailto:info@calevonintelligence.com">info@calevonintelligence.com</a><a href="https://www.linkedin.com/company/calevon-i%CC%87ntelligence/" target="_blank" rel="noopener noreferrer">LinkedIn</a></div>
 </footer>
 
 <a class="wa" href="https://wa.me/994104650927" target="_blank" rel="noopener noreferrer">💬 <span>WhatsApp</span></a>
